@@ -109,7 +109,7 @@ body {
 
 section {
   padding: 5rem 1rem;
-  text-align: center;
+  text-align: left; 
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -142,13 +142,13 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
-  justify-items: center;
+  justify-items: start; /* left-align the tiles instead of centering */
 }
 
 .project-tile {
-  background: white;
+  background: #ffffff; /* ensure full white background */
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* slightly darker shadow for visibility */
   overflow: hidden;
   max-width: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -156,7 +156,7 @@ h2 {
 
 .project-tile:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* stronger hover shadow */
 }
 
 .project-image {
@@ -170,25 +170,31 @@ h2 {
 }
 
 .project-content h3 {
-  font-size: 1.3rem;
-  color: var(--dark-color);
+  font-size: 1.4rem; /* slightly bigger for readability */
+  color: #222;       /* darker color for contrast */
   margin-bottom: 0.5rem;
 }
 
 .project-content p {
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.05rem; /* slightly larger paragraph text */
+  color: #333;        /* darker gray for better readability */
   margin-bottom: 1rem;
 }
 
 .project-link {
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700; /* more emphasis */
 }
 
 .project-link:hover {
   text-decoration: underline;
+}
+
+/* Optional: add subtle background on hover to highlight the tile */
+.project-tile:hover .project-content {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
 }
 
 /* =============================
