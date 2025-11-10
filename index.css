@@ -611,3 +611,66 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+
+/* --------------------------------------- */
+/* ----- Projects Section (Custom) ----- */
+/* --------------------------------------- */
+
+.projects {
+  background: var(--black);
+  color: var(--white);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--gutter-medium);
+  justify-items: center;
+}
+
+.project__tile {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  max-width: 400px;
+}
+
+.project__tile:hover {
+  transform: translateY(-8px);
+  border-color: var(--pink);
+  box-shadow: 0 8px 20px rgba(255, 50, 88, 0.2);
+}
+
+.project__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project__text {
+  padding: var(--gutter-small);
+}
+
+.project__text h3 {
+  color: var(--white);
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--gutter-small);
+}
+
+.project__text p {
+  color: var(--white-1);
+  font-size: 1.6rem;
+  margin-bottom: var(--gutter-small);
+}
+
+.project__text .link__text {
+  border-bottom: 1px solid var(--pink);
+  color: var(--pink);
+}
+
+.project__text .link__text:hover::after {
+  background: var(--pink);
+}
