@@ -1,153 +1,210 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
-  <!-- Put your site title here -->
-  <title>
-    Claudia Clinchard | Research and Data Scientist
-  </title>
-
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Claudia Clinchard, research data scientist" />
+  <title>Claudia Clinchard | Research and Data Scientist</title>
+  <meta name="description" content="Portfolio of Claudia Clinchard, Research and Data Scientist.">
+  <meta name="keywords" content="Claudia Clinchard, data science, R, Python, statistics, analytics" />
   <link rel="stylesheet" href="index.css" />
+
+  <style>
+    /* Smooth scrolling for all links */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ===== HEADER SECTION ===== */
+    .header__text-box {
+      text-align: center;
+      padding: 120px 20px 100px;
+    }
+
+    .header__text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .header__text p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav__items {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+    }
+
+    /* ===== SECTION STYLES ===== */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    /* ===== PROJECT GRID ===== */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .project-tile {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      max-width: 350px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .project-content p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    .project-link {
+      color: #ff4b81;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
-
   <!-- ***** Header ***** -->
-
   <header class="header" role="banner" id="top">
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Skills</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Projects</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
+          <li class="nav__item"><a href="#Skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#Projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#About" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#Contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
     </div>
+
     <div class="header__text-box row">
       <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Claudia Clinchard</span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p> As a research assistant and statistical consultant, I bring experience 
-          in managing and analyzing large datasets, applying statisitical models to solve
-        complex data-driven research qeustions, conducting thorough data validation to identify
-      and resolve anomalies in research projects, and working closely with a principal investigator 
-    to manage operations of a nine-year longitudinal study. I will be graduating in May 2026
-  with my Master's in Data Analysis and Applied Statistics and my PhD in Psychology and I am seeking
-to apply my analytical expertise to solve data-driven challenges. </p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+        <h1 class="heading-primary"><span>Claudia Clinchard</span></h1>
+        <p>
+          As a research assistant and statistical consultant, I bring experience 
+          in managing and analyzing large datasets, applying statistical models to solve
+          complex data-driven research questions, conducting thorough data validation, 
+          and working closely with a principal investigator on a nine-year longitudinal study. 
+          I will be graduating in May 2026 with my Master's in Data Analysis and Applied Statistics 
+          and my PhD in Psychology and am seeking to apply my analytical expertise to solve data-driven challenges.
+        </p>
+        <a href="#Contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
   </header>
 
   <main role="main">
-
     <!-- ***** Skills ***** -->
-
     <section class="Skills" id="Skills">
       <div class="row">
         <h2>Skills</h2>
-        <div class="work__boxes">
+        <ul class="work__list" style="list-style:none; padding:0; line-height:1.8;">
+          <li>R</li>
+          <li>Python (pandas, NumPy, scikit-learn)</li>
+          <li>SQL</li>
+          <li>PySpark</li>
+          <li>Tableau</li>
+          <li>Statistical methods: Linear/logistic regression, GLM, decision trees, SEM, clustering (K-means), PCA, GIS analysis, and more</li>
+        </ul>
+      </div>
+    </section>
 
-          <!-- Each div with the work__box class is a project. -->
+    <!-- ***** Projects ***** -->
+    <section class="projects" id="Projects">
+      <div class="container">
+        <h2>Data Projects</h2>
+        <div class="project-grid">
 
-          <div class="work__box">
-            <div class="work__text">
-              <ul class="work__list">
-                <li>R</li>
-                <li>Python (pandas, NumPy, scikit-learn)</li>
-                <li>SQL</li>
-                <li>PySpark</li>
-                <li>Tableau</li>
-                <li>Statistical knowledge: Linear and logistic regressoin, general linear modeling,
-                  decision trees, structural equation modeling (SEM), K-means clustering, principal component analysis (PCA),
-                  geographic information systems (GIS) analysis, and more
-                </li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
+          <!-- Project 1 -->
+          <div class="project-tile">
+            <img src="./images/CoffeeSalestile.png" alt="Coffee Sales Analysis" class="project-image">
+            <div class="project-content">
+              <h3>Coffee Sales</h3>
+              <p>Applied multiple linear regression to identify key predictors of coffee sales revenue.</p>
+              <a href="https://cclinchard2.github.io/Coffee-Sales/" target="_blank" class="project-link">View Project →</a>
             </div>
           </div>
+
+          <!-- Project 2 -->
+          <div class="project-tile">
+            <img src="./images/CollegeStudtile.png" alt="College Student Placement" class="project-image">
+            <div class="project-content">
+              <h3>Classification Trees</h3>
+              <p>Developed decision tree models to predict student college placement outcomes.</p>
+              <a href="https://github.com/cclinchard2/langdata" target="_blank" class="project-link">View Project →</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-<!-- ***** Projects ***** -->
-<section class="projects" id="projects">
-  <div class="container">
-    <h2>Data Projects</h2>
-    <div class="project-grid">
-
-      <!-- Project 1 -->
-      <div class="project-tile">
-        <img src="./images/CoffeeSalestile.png" alt="Coffee Sales Analysis" class="project-image">
-        <div class="project-content">
-          <h3>Coffee Sales</h3>
-          <p>Utilized multiple linear regression to determine the most influential predictors on coffee sales revenue.</p>
-          <a href="https://cclinchard2.github.io/Coffee-Sales/" target="_blank" class="project-link">View Project →</a>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-tile">
-        <img src="./images/CollegeStudtile.png" alt="College Student Placement" class="project-image">
-        <div class="project-content">
-          <h3>Classification Trees</h3>
-          <p>Used classification trees to predict student college placement .</p>
-          <a href="https://github.com/cclinchard2/langdata" target="_blank" class="project-link">View Project →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
     <!-- ***** About ***** -->
-
-    <section class="about" id="about">
+    <section class="about" id="About">
       <div class="row">
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
             <p>
-              I am a PhD candidate in Psychology and finishing my Master's in Data Analysis and Applied Statistics at Virginia Tech. 
-              I'll be graduating in May 2026 and am seeking opportunities in reserach or data science. 
+              I am a PhD candidate in Psychology and completing my Master's in Data Analysis and Applied Statistics at Virginia Tech. 
+              I'll be graduating in May 2026 and am seeking opportunities in research or data science.
             </p>
-            <!-- Provide a link to your resume -->
             <a href="#" class="btn">My Resume</a>
           </div>
-
           <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="Photo of Claudia Clinchard" />
           </div>
         </div>
       </div>
@@ -155,58 +212,26 @@ to apply my analytical expertise to solve data-driven challenges. </p>
   </main>
 
   <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
+  <section class="contact" id="Contact">
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
         <p>
-          Are you looking for a data scientist with knowledge in R, Python, SQL, and Tableau? I'd love to connect! The best way to reach me is via email.
+          Are you looking for a data scientist with experience in R, Python, SQL, and Tableau? I'd love to connect!
         </p>
-        <!-- Replace the email with yours -->
         <a href="mailto:claudia.clinchard@gmail.com" class="btn">claudia.clinchard@gmail.com</a>
       </div>
     </div>
   </section>
 
   <!-- ***** Footer ***** -->
-
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
+        <li><a href="https://github.com/cclinchard2" title="GitHub"><img src="./images/github.svg" class="footer__social-image" alt="GitHub"></a></li>
+        <li><a href="https://www.linkedin.com/in/claudia-clinchard/" title="LinkedIn"><img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn"></a></li>
       </ul>
-
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
+      <p>&copy; 2025 Claudia Clinchard</p>
     </div>
   </footer>
 
@@ -215,5 +240,4 @@ to apply my analytical expertise to solve data-driven challenges. </p>
   </a>
   <script src="./index.js"></script>
 </body>
-
 </html>
